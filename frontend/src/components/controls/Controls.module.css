@@ -1,0 +1,354 @@
+/* Controls & Inputs */
+.controlGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.controlGroupRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.controlHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
+
+.controlHeader label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
+
+.valueDisplay {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    background: rgba(0, 255, 65, 0.05);
+    padding: 2px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+/* Range Slider */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--accent-color-transparent);
+    outline: none;
+    border: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--text-main);
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    background: var(--accent-color);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
+}
+
+/* Custom Select Dropdown */
+.customSelectWrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.wrapperOpen {
+    z-index: 999;
+}
+
+.select {
+    background: var(--bg-input);
+    color: var(--text-main);
+    border: 2px solid var(--border-color);
+    padding: 10px 40px 10px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all var(--transition-med);
+    width: 100%;
+    font-family: var(--font-mono);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.select:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--bg-panel-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.selectOpen {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color-transparent);
+    background-color: var(--bg-color);
+}
+
+.selectArrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-color);
+    font-size: 0.7rem;
+    pointer-events: none;
+    transition: transform var(--transition-fast);
+}
+
+.customSelectWrapper:hover .selectArrow {
+    color: #fff;
+}
+
+.optionsList {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 4px;
+    box-shadow: var(--shadow-lg);
+    z-index: 9999;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: var(--font-mono);
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.optionsList::-webkit-scrollbar {
+    width: 4px;
+}
+
+.optionsList::-webkit-scrollbar-thumb {
+    background: var(--accent-color-transparent);
+    border-radius: 4px;
+}
+
+.optionItem {
+    padding: 10px 12px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border-radius: 4px;
+    margin-bottom: 2px;
+}
+
+.optionItem:hover {
+    background: var(--accent-color-transparent);
+    color: var(--text-main);
+}
+
+.optionActive {
+    color: var(--accent-color);
+    background: rgba(0, 255, 65, 0.15);
+    font-weight: 700;
+}
+
+.optionsGrid {
+    width: 640px;
+    column-count: 4;
+    column-gap: 0;
+    padding: 0;
+    max-height: none;
+    overflow: visible;
+    z-index: 100000;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color-focus);
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(20px);
+}
+
+.gridGroup {
+    break-inside: avoid-column;
+    width: 100%;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Remove right border if it's the 4th column or similar */
+/* In column-count, items flow down. So the "right" items are in the last column. */
+.gridGroup:last-child {
+    border-right: none;
+    border-bottom: none;
+}
+
+.gridGroup .groupHeader {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.gridOptions {
+    padding: 4px;
+}
+
+/* Color Picker */
+.colorInputWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.colorPicker {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+}
+
+.colorPicker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.colorPicker::-webkit-color-swatch {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.hexInput {
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2px 6px;
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    width: 80px;
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+.hexInput:focus {
+    border-color: var(--accent-color);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Toggle */
+.toggle {
+    width: 36px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    position: relative;
+    transition: background var(--transition-fast);
+    padding: 2px;
+}
+
+.toggleOn {
+    background: var(--accent-color);
+}
+
+.toggleKnob {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform var(--transition-fast);
+}
+
+.toggleOn .toggleKnob {
+    transform: translateX(16px);
+}
+
+/* Range Slider (Multi-handle) */
+.rangeSliderContainer {
+    position: relative;
+    width: 100%;
+    height: 32px;
+    margin-top: 8px;
+}
+
+.rangeTrack {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rangeSelected {
+    position: absolute;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rangeInput {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    outline: none;
+}
+
+.rangeInput::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.rangeInput::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    background: var(--accent-color);
+}

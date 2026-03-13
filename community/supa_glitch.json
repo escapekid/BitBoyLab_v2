@@ -1,0 +1,146 @@
+{
+  "version": "1.0",
+  "timestamp": "2026-03-12T16:40:23.857Z",
+  "layers": [
+    {
+      "id": "572ec9ce-9c39-4002-a31b-e53dd82252d7",
+      "type": "NOISE",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Normal",
+      "clipped": false,
+      "locked": true,
+      "isCollapsed": false,
+      "ignoreBelow": false,
+      "ignoreMosaic": false,
+      "lockedParams": [],
+      "pinned": true,
+      "opacity": 1,
+      "amount": 0.67,
+      "noise_type": "Uniform",
+      "seed": 42
+    },
+    {
+      "id": "c8255de5-759a-41a9-aebe-d435b7c96e74",
+      "type": "DITHER",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Hue",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": false,
+      "ignoreBelow": false,
+      "ignoreMosaic": false,
+      "lockedParams": [],
+      "pinned": false,
+      "opacity": 1,
+      "size": 40,
+      "col": "#9c202f",
+      "pattern": "Floyd-Steinberg"
+    },
+    {
+      "id": "f4c96757-e888-4e91-9bf2-f9667d9a7c07",
+      "type": "BLOCK_GLITCH",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Multiply",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": false,
+      "ignoreBelow": false,
+      "ignoreMosaic": false,
+      "lockedParams": [],
+      "pinned": false,
+      "opacity": 1,
+      "size": 6,
+      "amount": 0.1551402216168054
+    },
+    {
+      "id": "fbaef9bf-9696-429e-a1bd-5f1d8cdde063",
+      "type": "BLOCK_GLITCH",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Color",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": false,
+      "ignoreBelow": false,
+      "ignoreMosaic": false,
+      "lockedParams": [],
+      "pinned": false,
+      "opacity": 1,
+      "size": 43,
+      "amount": 0.6351178668480125
+    },
+    {
+      "id": "b14283bb-d36a-4052-a0d9-99154267a3e0",
+      "type": "POSTERIZE",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Hard Mix",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": false,
+      "ignoreBelow": false,
+      "ignoreMosaic": false,
+      "lockedParams": [],
+      "pinned": false,
+      "opacity": 1,
+      "levels": 7
+    },
+    {
+      "id": "88925256-4382-4cee-a5d5-afb7b5538171",
+      "type": "PIXEL_SORT",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Linear Light",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": false,
+      "ignoreBelow": false,
+      "ignoreMosaic": false,
+      "lockedParams": [],
+      "pinned": false,
+      "opacity": 1,
+      "direction": "Horizontal",
+      "sort_by": "Hue",
+      "reverse": false,
+      "min_len": 152,
+      "max_len": 8600,
+      "randomness": 0.00800555600439301
+    },
+    {
+      "id": "initial-source",
+      "type": "SOURCE",
+      "enabled": true,
+      "blend": "Normal",
+      "range": [
+        0,
+        255
+      ],
+      "clipped": false,
+      "isCollapsed": true,
+      "mosaic": 3,
+      "opacity": 1,
+      "locked": true
+    }
+  ]
+}

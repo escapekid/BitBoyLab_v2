@@ -1,0 +1,21 @@
+# BitBoy Lab Python dependencies
+# Install: pip3 install -r requirements.txt
+
+# ── Core image processing ──────────────────────────────────────────────────
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# ── Web UI ────────────────────────────────────────────────────────────────
+streamlit>=1.32.0
+
+# ── REST API (Next.js integration) ────────────────────────────────────────
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.0.0
+python-multipart>=0.0.9   # for FastAPI file uploads
+
+# ── HTTP client (font download) ───────────────────────────────────────────
+requests>=2.31.0
+
+# ── Optional: GPU acceleration (uncomment if CUDA is available) ───────────
+# cupy-cuda12x>=12.0.0   # replace 12x with your CUDA version

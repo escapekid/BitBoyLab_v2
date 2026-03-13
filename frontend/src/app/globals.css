@@ -1,0 +1,195 @@
+/* JetBrains Mono is imported via layout.tsx using next/font/google */
+
+:root {
+  /* Color Palette - Deeper Hacker/Cyber */
+  --bg-color: #0a0a0c;
+  --bg-panel: rgba(20, 20, 25, 0.7);
+  --bg-panel-hover: rgba(30, 30, 35, 0.8);
+  --bg-input: rgba(0, 0, 0, 0.5);
+
+  --border-color: rgba(0, 255, 65, 0.15);
+  --border-color-focus: rgba(0, 255, 65, 0.6);
+
+  --text-main: #e2e2e4;
+  --text-muted: #8b8b94;
+
+  --accent-color: #00ff41; /* Initial Matrix Green */
+  --accent-rgb: 0, 255, 65;
+  --accent-color-hover: #00cc34;
+  --accent-color-transparent: rgba(var(--accent-rgb), 0.1);
+
+  --danger-color: #ff3366;
+  --danger-color-hover: #cc2952;
+  --danger-color-transparent: rgba(255, 51, 102, 0.15);
+
+  /* Typography */
+  --font-sans: var(--font-jetbrains-mono), monospace;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  /* Shadows & FX */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.8);
+  --shadow-side: -10px 0 30px rgba(0, 0, 0, 0.5);
+  --shadow-neon: 0 0 10px rgba(0, 255, 65, 0.3), 0 0 20px rgba(0, 255, 65, 0.1);
+  --blur-panel: blur(20px);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-med: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* Layout */
+  --sidebar-width: 520px;
+
+  /* Bitcore accents */
+  --border-dashed: 1px dashed rgba(var(--accent-rgb), 0.2);
+  --bg-grid: linear-gradient(rgba(var(--accent-rgb), 0.03) 1px, transparent 1px),
+             linear-gradient(90deg, rgba(var(--accent-rgb), 0.03) 1px, transparent 1px);
+  --logo-shadow: 0 0 8px rgba(var(--accent-rgb), 0.4);
+}
+
+[data-theme="white"] {
+  --bg-color: #f5f5f7;
+  --bg-panel: rgba(255, 255, 255, 0.8);
+  --bg-panel-hover: rgba(240, 240, 245, 0.9);
+  --bg-input: rgba(255, 255, 255, 0.9);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-color-focus: rgba(0, 122, 255, 0.5);
+  --text-main: #1d1d1f;
+  --text-muted: #86868b;
+  --accent-color: #007aff;
+  --accent-color-hover: #0051a8;
+  --accent-color-transparent: rgba(0, 122, 255, 0.1);
+  --danger-color: #ff3b30;
+  --bg-grid: linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+             linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  --logo-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-side: -4px 0 16px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="blade-runner"] {
+  --bg-color: #0d0221;
+  --bg-panel: rgba(15, 4, 32, 0.7);
+  --bg-panel-hover: rgba(45, 10, 80, 0.8);
+  --border-color: rgba(var(--accent-rgb), 0.2);
+  --border-color-focus: var(--accent-color);
+  --text-main: #ffffff;
+  --text-muted: #a084ca;
+}
+
+[data-theme="mono"] {
+  --bg-color: #0a0a00;
+  --bg-panel: rgba(20, 20, 0, 0.8);
+  --border-color: rgba(var(--accent-rgb), 0.3);
+  --border-color-focus: var(--accent-color);
+  --text-main: var(--accent-color);
+  --text-muted: rgba(var(--accent-rgb), 0.7);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: var(--blur-panel);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.glass-panel-hover:hover {
+  background: var(--bg-panel-hover);
+  border-color: var(--border-color-focus);
+}
+
+/* CRT Scanline Effect Overlay */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+              linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 3px, 3px 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.3;
+}
+
+.crt-overlay::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 10000;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.1; }
+  5% { opacity: 0.2; }
+  10% { opacity: 0.1; }
+  15% { opacity: 0.3; }
+  20% { opacity: 0.1; }
+  25% { opacity: 0.2; }
+  30% { opacity: 0.1; }
+  100% { opacity: 0.1; }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: var(--bg-grid);
+  background-size: 30px 30px;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Base button reset */
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+input,
+select {
+  font-family: inherit;
+  outline: none;
+}

@@ -1,0 +1,193 @@
+{
+  "version": "1.0",
+  "timestamp": "2026-03-12T14:29:42.731Z",
+  "layers": [
+    {
+      "id": "aeb5e09d-1b5b-44fe-b1e5-45fcf5761061",
+      "type": "GRADIENT_MAP",
+      "enabled": false,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Normal",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": true,
+      "ignoreBelow": false,
+      "ignoreMosaic": false,
+      "opacity": 1,
+      "num_colors": "4",
+      "col0": "#80ff00",
+      "pos0": 0,
+      "col1": "#ff0000",
+      "pos1": 85,
+      "col2": "#8000ff",
+      "pos2": 170,
+      "col3": "#00ffff",
+      "pos3": 255,
+      "syncHarmony": true
+    },
+    {
+      "id": "17660fcc-71c5-4984-bb08-72b8c7fe8c2b",
+      "type": "LEVELS",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Normal",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": true,
+      "ignoreBelow": false,
+      "ignoreMosaic": true,
+      "opacity": 1,
+      "black_lift": 0,
+      "mid_point": 0.1,
+      "white_point": 155
+    },
+    {
+      "id": "0c703fa5-e6c0-4873-bd74-cbc451fb76b3",
+      "type": "NOISE",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Normal",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": true,
+      "ignoreBelow": false,
+      "ignoreMosaic": true,
+      "opacity": 1,
+      "amount": 0.53,
+      "noise_type": "Uniform",
+      "seed": 42
+    },
+    {
+      "id": "a1445ae4-fe8c-4f5f-9f53-9a551062fc49",
+      "type": "NOISE",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Normal",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": true,
+      "ignoreBelow": false,
+      "ignoreMosaic": false,
+      "opacity": 1,
+      "amount": 1,
+      "noise_type": "Gaussian",
+      "seed": 42
+    },
+    {
+      "id": "0fcbebb8-9dad-4681-a774-d810d0457704",
+      "type": "GRADIENT_MAP",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Hue",
+      "clipped": false,
+      "locked": true,
+      "isCollapsed": true,
+      "ignoreBelow": false,
+      "ignoreMosaic": true,
+      "opacity": 1,
+      "num_colors": "4",
+      "col0": "#80ff00",
+      "pos0": 0,
+      "col1": "#ff0000",
+      "pos1": 85,
+      "col2": "#8000ff",
+      "pos2": 170,
+      "col3": "#00ffff",
+      "pos3": 255,
+      "syncHarmony": true
+    },
+    {
+      "id": "e6bb3751-509b-477a-b159-edeb360c1395",
+      "type": "DITHER",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Exclusion",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": true,
+      "ignoreBelow": false,
+      "ignoreMosaic": true,
+      "opacity": 1,
+      "size": 60,
+      "col": "#80ff00",
+      "pattern": "Floyd-Steinberg"
+    },
+    {
+      "id": "7ea28bea-62c7-48e0-ac3f-6f524ba64b31",
+      "type": "TILESET_DITHER",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Normal",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": true,
+      "ignoreBelow": false,
+      "ignoreMosaic": true,
+      "opacity": 1,
+      "size": 88,
+      "mode": "Source Colors",
+      "full_bg": true,
+      "symbol_set": "organic",
+      "brightness": 3.3740005737993872,
+      "contrast": 3.794624140169947,
+      "col0": "#5b7911",
+      "col1": "#6fca6b",
+      "col2": "#d5020f",
+      "col3": "#f9e4c0"
+    },
+    {
+      "id": "0e13a1e4-3f87-4f1c-a06d-014d64ec4af1",
+      "type": "GLITCH",
+      "enabled": true,
+      "range": [
+        0,
+        255
+      ],
+      "blend": "Exclusion",
+      "clipped": false,
+      "locked": false,
+      "isCollapsed": true,
+      "ignoreBelow": false,
+      "ignoreMosaic": true,
+      "opacity": 1,
+      "amount": 0.5865935744589307,
+      "quality": 16
+    },
+    {
+      "id": "initial-source",
+      "type": "SOURCE",
+      "enabled": true,
+      "blend": "Normal",
+      "range": [
+        0,
+        255
+      ],
+      "clipped": false,
+      "isCollapsed": false,
+      "mosaic": 59,
+      "opacity": 1,
+      "locked": true
+    }
+  ]
+}
