@@ -40,6 +40,7 @@ def apply_ascii(
     soft_mask: bool = True,
     offset_x: int = 0,
     offset_y: int = 0,
+    full_bg: bool = False,
 ) -> Image.Image:
     """Render the source image as ASCII art within *mask*."""
     w, h = img.size
